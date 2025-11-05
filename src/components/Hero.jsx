@@ -1,5 +1,6 @@
 import Spline from '@splinetool/react-spline';
 import { Rocket, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
@@ -11,15 +12,23 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80 pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 pb-24">
-        <div className="max-w-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="max-w-2xl"
+        >
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-sm text-white/80">
-            <Sparkles className="h-4 w-4 text-cyan-300" /> Building delightful software
+            <Sparkles className="h-4 w-4 text-cyan-300" /> Crafting delightful software
           </div>
           <h1 className="mt-6 text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight">
-            Software Engineer crafting modern, interactive experiences
+            Muhammad Ihsanuddienullah
           </h1>
+          <p className="mt-2 text-lg sm:text-xl text-white/80">
+            Software Engineer — building modern, interactive experiences with React, TypeScript, and scalable cloud backends.
+          </p>
           <p className="mt-4 text-white/80 max-w-xl">
-            I design and build performant web apps with React, TypeScript, and cloud-native backends. I love playful interactions and polished UX.
+            I love blending performance, clean architecture, and playful interactions to ship products people enjoy using.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a href="#projects" className="inline-flex items-center justify-center gap-2 rounded-md bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-5 py-3 transition-colors">
@@ -29,7 +38,7 @@ export default function Hero() {
               Get in touch
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

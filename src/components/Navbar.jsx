@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 function NavLink({ href, children }) {
   return (
@@ -17,8 +18,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="h-16 flex items-center justify-between">
           <a href="#home" className="text-white font-semibold tracking-tight text-lg">
-            <span className="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">Flames</span>
-            .Engineer
+            <span className="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">Muhammad</span> Ihsanuddienullah
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
